@@ -31,6 +31,7 @@ public class users {
     }
 
     public users() {
+        super();
     }
 
     public users(String name, String username, String password) {
