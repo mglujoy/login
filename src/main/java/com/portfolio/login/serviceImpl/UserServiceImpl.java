@@ -31,8 +31,8 @@ public class UserServiceImpl implements UserService {
                 if(rs.getString(6).equals(username) && rs.getString(7).equals(password)) {
                     flag = 1;
                 } else {
-                    System.out.println("Invalid username/password");}
-                    flag = 0;
+                    System.out.println("Invalid username/password");
+                    flag = 0;}                    
             }
             
         } catch (SQLException ex) {
