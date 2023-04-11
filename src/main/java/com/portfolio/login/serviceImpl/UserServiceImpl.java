@@ -24,11 +24,13 @@ public class UserServiceImpl implements UserService {
     public int loginValidation(String username, String password) {
         
         try {
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE username = '" + username + "' ");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE username = '" +username+ "' ");
             ResultSet rs = statement.executeQuery();
             
             while (rs.next()){
                 if(rs.getString(6).equals(username) && rs.getString(7).equals(password)) {
+                    System.out.println("Valid credentials");
+
                     flag = 1;
                 } else {
                     System.out.println("Invalid username/password");
